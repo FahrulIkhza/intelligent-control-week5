@@ -1,0 +1,29 @@
+Analisis Hasil:
+a.	Seberapa akurat YOLOv8 dalam mendeteksi pose?
+YOLOv8 Pose memiliki tingkat akurasi yang baik dalam mengenali pose manusia karena menggunakan teknologi CNN yang sudah dioptimalkan untuk deteksi objek dan estimasi pose. Dengan struktur yang efisien dan pembelajaran dari dataset besar seperti COCO-Keypoints, YOLOv8 dapat mencapai tingkat presisi tinggi dalam berbagai situasi. Namun demikian, tingkat akurasi sangat bergantung pada kualitas data latih dan tingkat kesulitan pose yang dideteksi.
+
+b.	Apakah model berfungsi baik saat cahaya minim?
+Performa YOLOv8 Pose cenderung menurun saat kondisi pencahayaan kurang memadai karena model mengandalkan informasi visual untuk mengenali titik-titik kunci tubuh. Jika kontras gambar rendah atau terdapat gangguan noise, deteksi pose bisa menjadi kurang tepat. Meskipun demikian, penggunaan teknik seperti CLAHE atau pemrosesan gambar tambahan dapat membantu memperbaiki hasilnya.
+
+c.	Bagaimana perbandingan YOLOv8 dengan metode HPE lain seperti MediaPipe atau OpenPose?
+1)	YOLOv8 Pose: Memiliki kecepatan tinggi dan efisien, dapat bekerja secara real-time dengan waktu tunda minimal. Cocok digunakan pada perangkat dengan spesifikasi terbatas. 
+2)	MediaPipe: Dikembangkan Google, lebih ringan dan sangat optimal untuk perangkat mobile. Namun, bisa mengalami kesalahan pada pose yang rumit. 
+3)	OpenPose: Lebih akurat untuk estimasi pose banyak orang dan mendukung deteksi pose yang lebih detail, tetapi memerlukan daya komputasi yang lebih besar dibanding YOLOv8.
+
+
+Diskusi :
+a.	Bagaimana penerapan YOLOv8 Pose dalam bidang robotika dan otomatisasi industri?
+YOLOv8 Pose dapat diterapkan dalam berbagai aplikasi robotika dan otomatisasi industri, antara lain:
+1)	Memungkinkan robot mengenali gerakan manusia untuk tugas kerja sama
+2)	Monitoring postur pekerja untuk mencegah kecelakaan kerja di lingkungan industri
+3)	Memungkinkan kontrol mesin menggunakan gerakan tubuh tanpa perlu sentuhan fisik
+b.	Apa saja hambatan dalam mendeteksi pose manusia secara real-time?
+1)	Model harus menyeimbangkan antara kecepatan respons dan tingkat akurasi 
+2)	Variasi pose seperti tangan yang menutupi wajah atau postur rumit sulit dideteksi 
+3)	Perbedaan kondisi lingkungan seperti cahaya redup, sudut kamera yang kurang ideal, atau latar belakang yang ramai dapat mempengaruhi hasil deteksi
+
+c.	Bagaimana cara meningkatkan akurasi deteksi pose dengan dataset tambahan?
+1.	Menambahkan variasi kondisi pencahayaan, rotasi objek, ukuran, dan latar belakang pada data latih 
+2.	Melatih model dengan data tambahan yang sesuai dengan kebutuhan spesifik aplikasi (misalnya, pekerja pabrik atau atlet) 
+3.	Menggunakan data yang lebih spesifik untuk memperbaiki kesalahan deteksi pada kondisi tertentu 
+4.	Menggabungkan teknologi visi komputer dengan sensor IMU atau LiDAR untuk meningkatkan akurasi estimasi pose dalam kondisi sulit
